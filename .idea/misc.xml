@@ -13,7 +13,9 @@
         <entry key="app/src/main/res/layout/fragment_play_game.xml" value="0.15020263424518743" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/fragment_start.xml" value="0.15020263424518743" />
+        <entry key="app/src/main/res/layout/fragment_win.xml" value="0.15020263424518743" />
         <entry key="app/src/main/res/layout/letter_view.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.15020263424518743" />
       </map>
     </option>
   </component>

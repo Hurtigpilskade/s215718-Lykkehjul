@@ -1,11 +1,14 @@
 package com.example.s215718lykkehjul
 
+import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class Adapter (val data:List<Guess>): RecyclerView.Adapter<Adapter.ViewHolder>(){
-    override fun onCreateViewHolder(parent: ViewGroup: Int): Adapter.ViewHolder{
-        val adapterLayout = Layoutinflater.from(parent.context),inflate(R.layout.list_item, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType : Int): Adapter.ViewHolder{
+        val adapterLayout = LayoutInflater.from(parent.context).inflate(R.layout.list_item,parent,false)
         return ViewHolder(adapterLayout)
     }
     override fun onBindViewHolder(holder: Adapter.ViewHolder, position: Int){

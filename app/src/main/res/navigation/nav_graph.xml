@@ -2,36 +2,46 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    android:id="@+id/nav"
+    app:startDestination="@id/frontFragment">
+
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.example.s215718lykkehjul.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main" >
+        android:id="@+id/frontFragment"
+        android:name="com.example.s215718lykkehjul.Start"
+        android:label="fragment_front"
+        tools:layout="@layout/fragment_start" >
         <action
-            android:id="@+id/action_mainFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
-        <action
-            android:id="@+id/action_mainFragment_to_firstFragment"
-            app:destination="@id/firstFragment" />
+            android:id="@+id/action_startFragment_to_playGameFragment"
+            app:destination="@id/playGameFragment" />
     </fragment>
     <fragment
-        android:id="@+id/firstFragment"
-        android:name="com.example.s215718lykkehjul.FirstFragment"
-        android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
+        android:id="@+id/playGameFragment"
+        android:name="com.example.s215718lykkehjul.PlayFragment"
+        android:label="fragment_play_game"
+        tools:layout="@layout/fragment_play_game" >
         <action
-            android:id="@+id/action_firstFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_playGameFragment_to_winFragment"
+            app:destination="@id/winFragment" />
+        <action
+            android:id="@+id/action_playGameFragment_to_lostFragment"
+            app:destination="@id/lostFragment" />
     </fragment>
     <fragment
-        android:id="@+id/secondFragment"
-        android:name="com.example.s215718lykkehjul.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" >
+        android:id="@+id/winFragment"
+        android:name="com.example.s215718lykkehjul.Win"
+        android:label="fragment_win"
+        tools:layout="@layout/fragment_win" >
         <action
-            android:id="@+id/action_secondFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            android:id="@+id/action_winFragment_to_startFragment"
+            app:destination="@id/frontFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lostFragment"
+        android:name="com.example.s215718lykkehjul.Lost"
+        android:label="fragment_loss"
+        tools:layout="@layout/fragment_lost" >
+        <action
+            android:id="@+id/action_lostFragment_to_frontFragment"
+            app:destination="@id/frontFragment" />
     </fragment>
 </navigation>

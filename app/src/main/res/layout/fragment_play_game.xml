@@ -1,6 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".SecondActivity">
+
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="294dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="209dp">
+
+
+            <ImageView
+                android:id="@+id/wheel"
+                android:layout_width="wrap_content"
+                android:layout_height="235dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="31dp"
+                android:layout_marginEnd="67dp"
+                android:layout_marginBottom="28dp"
+                android:rotation="67.5"
+                android:src="@drawable/hjul" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="45dp"
+                android:layout_height="35dp"
+                android:layout_alignStart="@+id/wheel"
+                android:layout_alignTop="@+id/wheel"
+                android:layout_alignEnd="@+id/wheel"
+                android:layout_alignBottom="@+id/wheel"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="-26dp"
+                android:layout_marginEnd="109dp"
+                android:layout_marginBottom="232dp"
+                android:pivotX="50%"
+                android:pivotY="50%"
+                app:srcCompat="@android:drawable/arrow_down_float" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            >
+
+            <Button
+                android:id="@+id/spin"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spin" />
+
+            <Button
+                android:id="@+id/btnGuess"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:onClick="guessClickHandler"
+                android:text="Guess" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="21dp"
+            android:text="Point:"
+            android:textColor="?android:attr/colorEdgeEffect"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pointantal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="23dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="22dp" />
+
+        <ImageView
+            android:id="@+id/heart"
+            android:layout_width="74dp"
+            android:layout_height="67dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="17dp"
+            app:srcCompat="@drawable/hjerte" />
+
+
+        <TextView
+            android:id="@+id/total_lives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/heart"
+            android:layout_alignTop="@+id/heart"
+            android:layout_alignBottom="@+id/heart"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="26dp"
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+
+        <EditText
+            android:id="@+id/etGuess"
+            android:layout_width="177dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="125dp"
+            android:layout_marginBottom="92dp"
+            android:backgroundTint="@color/black"
+            android:ems="10"
+            android:hint="Guess letter"
+            android:inputType="text"
+            android:maxLength="1"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/design_default_color_primary"
+            android:textColorHighlight="@color/white" />
+
+        <TextView
+            android:id="@+id/wheelOutcome"
+            android:layout_width="115dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="154dp"
+            android:layout_marginBottom="162dp"
+            android:text=""
+            android:textColor="@color/purple_500"
+            android:textSize="21dp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRandomWord"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="112dp"
+            android:layout_marginBottom="66dp"
+            android:foregroundGravity="center"
+            tools:listitem="@layout/list_item" />
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
