@@ -1,6 +1,9 @@
 package com.example.s215718lykkehjul
 
+import kotlin.random.Random
+
 class Data {
+
     //    fun loadPoints():List<Point>{
 //       return listOf<Point>(
 //           Point("900"),
@@ -16,10 +19,16 @@ class Data {
 //           Point("800"),
 //    }
 
-    fun loadRandomWords():List<String>{
+    fun loadRandomWords(): List<String> {
         return listOf<String>(
-            "one","hi","hvad","klassen","skole"
+            "Computer", "Tastatur", "Mus", "Skærm", "Appudvikling"
         )
     }
-
 }
+
+
+
+
+
+
+
